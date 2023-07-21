@@ -1,0 +1,576 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap");
+
+
+
+:root{
+    --title-font-size: 3rem;
+    --sub-title-font: 1.5rem;
+    --base-padding: 4rem 6rem;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+    color: white;
+}
+
+.navbar{
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 120px;
+    position: absolute;
+    z-index: 2;
+}
+
+.navbar_brand{
+    width: 150px;
+    height: 100%;
+}
+
+.navbar_netflix_logo{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.navbar__list{
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.dropdown__container{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid white;
+    padding: 8px 20px;
+    border-radius: 4px;
+    background-color: rgba(0,0,0,0.4);
+    cursor: pointer;
+}
+
+.language__dropdown{
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.language__dropdown:focus{
+    outline: none;
+}
+
+option{
+    color: grey;
+}
+
+.signin-btn{
+    background-color: rgb(299, 9, 20);
+    border: 1px solid rgb(299, 9, 20);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.netflix-bg{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 80vh;
+    background-image: url(netflix-images/Background.jpg);
+    background-size: cover;
+}
+
+.netflix-bg_overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.netflix-card {
+    position: absolute;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    word-break: break-word;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+
+.netflix-card_title {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .netflix-card_sub-title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .netflix-card_description {
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-align: center;
+  }
+  
+  .netflix-card_title span {
+    display: inline;
+    white-space: nowrap;
+  }
+  
+  
+  .email-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    z-index: 3;
+    margin-top: 20px;
+  }
+.form-container{
+    background-color: transparent;
+}
+
+.email-input{
+    color: white;
+    border: 0.5px solid #ccc;
+    padding: 15px 12rem 15px 20px;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+}
+
+.email-input:focus{
+    outline: none;
+    border: 0.5px solid white;
+}
+.email-input:placeholder{
+    color: #ccc;
+    font-size: 18px;
+}
+
+.primary-button {
+    background-color: rgb(299, 9, 20);
+    border: 1px solid rgb(299, 9, 20);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  }
+
+  .primary-button:hover {
+  background-color: rgb(200, 9, 20);
+  border-color: rgb(200, 9, 20);
+}
+
+.feature-content{
+    border-top: 8px solid #222222;
+}
+
+.feature{
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: var(--base-padding);
+}
+
+.feature-details{
+    flex-basis: 50%;
+}
+
+.feature-details__heading{
+    font-size: var(--title-font-size);
+    font-weight: 900;
+    margin: 10px 0;
+}
+
+.feature-details__sub-heading{
+    font-size: var(--sub-title-font);
+    font-weight: 400;
+    
+}
+
+.feature-image-container{
+    flex-basis: 50%;
+    position: relative;
+}
+
+.feature-image{
+    width: 100%;
+}
+
+.feature-01-bg-video-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    max-width: 73%;
+    max-height: 54%;
+    top: 20%;
+    left: 13%;
+    z-index: -1;
+}
+
+
+.feature-bg-video{
+    width: 100%;
+}
+
+
+.feature__02{
+    flex-direction: row-reverse;
+}
+
+.feature-02-poster-container{
+    position: absolute;
+    width: 100%;
+    max-width: 24rem;
+    min-width: 15rem;
+    bottom: 6%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    background-color: black;
+    border: 2px solid rgba(225, 255, 255, 0.25);
+    border-radius: 10px;
+    padding: 10px  20px;
+    gap: 15px;
+}
+
+.poster-container{
+    width: 20%;
+}
+
+.poster{
+    width: 100%;
+    height: 100%;
+}
+
+.poster-details{
+    width: 60%;
+}
+
+.poster-details > h4{
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.poster-details > h6{
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(63, 63, 246);
+}
+
+.downlaod-gif-container{
+    width: 20%;
+    height: 100%;
+}
+
+.gif{
+    width: 100%;
+    height: 100%;
+}
+
+.feature-03-bg-video-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    max-width: 63%;
+    max-height: 47%;
+    top: 9%;
+    left: 19%;
+    z-index: -1;
+}
+
+.feature-details_heading{
+    font-size: var(--title-font-size);
+    font-weight: 900;
+    margin: 10px 0;
+    width: 35rem;
+}
+
+.feature__04{
+    flex-direction: row-reverse;
+}
+
+.faq-list-container{
+    border-top: 8px solid #222222;
+    padding: var(--base-padding);
+}
+
+.faq-heading{
+    font-size: var(--title-font-size);
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.faq-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.faq-question{
+    max-width: 80%;
+}
+
+.faq-title{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    font-size: var(--sub-title-font);
+    font-weight: 400;
+    background-color: rgba(45, 45, 45, 1);
+    border: 1px solid rgba(45, 45, 45, 1);
+    color: white;
+}
+
+.faq-title:hover{
+    background-color: rgba(78, 78, 78, 1);
+    cursor: pointer;
+}
+
+.faq-answer{
+    max-height: 0; 
+    overflow: hidden; 
+    background-color: #303030;
+    border-top: 1px solid black;
+    font-size: 1.2rem;
+    transition: max-height 0,5s e;
+}
+
+.faq-answer > p{
+    margin: 1.5rem;
+}
+
+.faq-email{
+    text-align: center;
+}
+
+.faq-email > h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 4rem 0 2rem 0;
+}
+
+footer{
+    border-top: 8px solid #333;
+    padding: var(--base-padding);
+    color: rgba(225, 225, 225, 0.7);
+}
+
+.footer-content{
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-content__raw-01 > h4{
+    font-size: 16px;
+    font-weight: 400;
+    padding-top: 25px;
+}
+
+.footer-content__raw-01 a{
+    color: rgba(225, 225, 225, 0.7);
+    font-weight: 400;
+}
+
+.footer-content__raw-02 > ul{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 10px;
+    list-style-type: none;
+    line-height: 1.4rem;
+    padding: 15px 0;
+}
+
+.footer-content__raw-02 > ul > li > a{
+    color: rgba(225, 225, 225, 0.7);
+    font-size: 0.875rem;
+}
+
+.footer-content__raw-02 > ul > li > a:hover{
+    color: white;
+}
+
+.footer-content__raw-03 > .dropdown__container{
+    max-width: fit-content;
+    border: 1px solid white;
+    color: white;
+}
+
+.footer-content__raw-03 > .dropdown__container > .language__dropdown{
+    color: white;
+}
+
+
+
+/* Mobile Devices */
+@media only screen and (max-width: 600px) {
+    .navbar {
+      padding: 10px 20px;
+    }
+  
+    .navbar_brand {
+      width: 120px;
+    }
+  
+    .navbar__list {
+      display: none; /* Hide the navigation links on mobile */
+    }
+  
+    .signin-btn {
+      padding: 8px 12px;
+      font-size: 14px;
+    }
+  
+    .netflix-card_title {
+      font-size: 2rem;
+    }
+  
+    .netflix-card_sub-title {
+      font-size: 1rem;
+    }
+  
+    .netflix-card_description {
+      font-size: 1rem;
+    }
+  
+    .email-form {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .email-input {
+      padding: 10px;
+    }
+  
+    .primary-button {
+      padding: 12px;
+      font-size: 16px;
+    }
+  
+    /* Add more responsive styles as needed for other elements */
+  }
+  
+  /* Tablets */
+  @media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .navbar {
+      padding: 15px 40px;
+    }
+  
+    .navbar__list {
+      gap: 15px;
+    }
+  
+    .netflix-card_title {
+      font-size: 2.5rem;
+    }
+  
+    .netflix-card_sub-title {
+      font-size: 1.25rem;
+    }
+  
+    .netflix-card_description {
+      font-size: 1.1rem;
+    }
+  
+    .feature-details__heading {
+      font-size: 2.5rem;
+    }
+  
+    .faq-heading {
+      font-size: 2.5rem;
+    }
+  
+    /* Add more responsive styles as needed for other elements */
+  }
+  
+  /* Laptops and Desktops */
+  @media only screen and (min-width: 1025px) {
+    .navbar {
+      padding: 20px 120px;
+    }
+  
+    .navbar_brand {
+      width: 150px;
+    }
+  
+    .navbar__list {
+      display: flex;
+    }
+  
+    .netflix-card_title {
+      font-size: 3rem;
+    }
+  
+    .netflix-card_sub-title {
+      font-size: 1.5rem;
+    }
+  
+    .netflix-card_description {
+      font-size: 1.2rem;
+    }
+  
+    .email-form {
+      flex-direction: row;
+      gap: 15px;
+    }
+  
+    .email-input {
+      padding: 15px 12rem 15px 20px;
+    }
+  
+    .primary-button {
+      padding: 15px;
+      font-size: 20px;
+    }
+  
+    /* Add more responsive styles as needed for other elements */
+  }
+  
